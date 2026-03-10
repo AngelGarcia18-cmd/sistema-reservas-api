@@ -5,7 +5,7 @@ El sistema permite registrar usuarios, crear eventos, inscribir participantes y 
 
 ---
 
-# Tecnologías itilizadas
+# Tecnologías utilizadas
 
 - Node.js
 - Express.js
@@ -186,5 +186,6 @@ En la documentación del proyecto se incluyen las capturas de cada endpoint prob
 # Autor
 
 Proyecto desarrollado por.
+
 
 Ángel David García Jiménez
