@@ -26,7 +26,7 @@ git clone https://github.com/AngelGarcia18-cmd/sistema-reservas-api.git
 
 2. Entrar a la carpeta del proyecto
 
-cd sistema-reservas-api
+cd backend
 
 3. Instalar dependencias
 
@@ -189,3 +189,4 @@ Proyecto desarrollado por.
 
 
 Ángel David García Jiménez
+
