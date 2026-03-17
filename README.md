@@ -5,7 +5,7 @@ El sistema permite registrar usuarios, crear eventos, inscribir participantes y 
 
 ---
 
-# Tecnologías utilizadas
+# Tecnologías itilizadas
 
 - Node.js
 - Express.js
