@@ -27,7 +27,7 @@ const obtenerEventoPorId = async (req, res) => {
         if (!evento) return res.status(404).json({ mensaje: "Evento no encontrado" });
         res.json(evento);
     } catch (error) {
-        res.status(500).json({ errorr: error.message });
+        res.status(500).json({ error: error.message });
     }
 };
 
@@ -46,7 +46,13 @@ const actualizarEvento = async (req, res) => {
 const eliminarEvento = async (req, res) => {
     try {
         const evento = await Evento.findByIdAndDelete(req.params.id);
-        if (!evento) return res.status(404).json({ mensaje: "Evento no encontrado" });
+        if (!evento) {
+            return res.status(404).json({ mensaje: "Evento no encontrado" });
+        }
+
+        res.json({
+            mensaje: "Evento eliminado correctamente"
+        });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
