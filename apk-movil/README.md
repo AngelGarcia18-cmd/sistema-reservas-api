@@ -1,50 +1,146 @@
-# Welcome to your Expo app 👋
+# 📱 Aplicación Móvil de Gestión de Reservas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📝 Descripción
 
-## Get started
+Esta aplicación móvil permite la gestión completa de eventos mediante una interfaz intuitiva y conectada a una API REST.
+La app está construida con **React Native (Expo)** y consume un backend desarollado previamente, implementando autenticación mediante tokens JWT.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🎯 Objetivo
 
-2. Start the app
+Permitir a los uusarios autenticados gestionar eventos desde dispositivos móviles, incluyendo la creación, edición, eliminarión y visualización de los mismos.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## ⚙️ Tecnologías utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- JavaScript
+- AsyncStorage (manejo de sesión)
+- API REST (Node.js + Express)
+- MongoDB
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🔐 Autenticación
 
-When you're ready, run:
+La aplicación implementa un sistema de autenticación basado en tokens JWT:
 
-```bash
-npm run reset-project
-```
+- Inicio de sesión con email y contraseña
+- Almacenamiento del token en el dispositivo
+- Envío del token en cada petición protegida
+- Control de acceso según roles (admin / participante)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📱 Funcionalidades principales
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🔑 Login
 
-## Join the community
+Permite al usuario autenticarse para acceder a la aplicación.
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📋 Listado de Eventos
+
+- Visualización de eventos en formato de tarjetas
+- Información básica: nombre, lugar y fecha
+- Opción de expandir detalles adicionales
+- Animaciones suaves para mejorar la experiencia del usuario
+
+---
+
+## ➕ Crear evento
+
+- Registro de nuevos eventos
+- Validación de campos obligatorios
+- Envío de datos al backend mediante POST
+
+---
+
+## ✏️ Editar evento
+
+- Modificación de eventos existentes
+- Precarga de información en el formulario
+- Actualización mediante PUT
+
+---
+
+## 🗑️ Eliminar evento
+
+- Eliminación de eventos con confirmación previa
+- Comunicación con la API mediante DELETE
+
+---
+
+## 🚪 Cerrar sesión
+
+- Eliminación del token almacenado
+- Redirección al login
+- Protección de rutas
+
+---
+
+## 🔗 Conexión con API
+
+La aplicación consume los siguientes endpoints:
+
+- POST /auth/login
+- GET /eventos
+- POST /eventos
+- PUT /eventos/:id
+- DELETE /eventos/:id
+
+Todas las rutas protegidas requieren el envío del token en el header:
+
+Authorization: Bearer
+
+---
+
+## 🎨 Interfaz de usuario
+
+La aplicación cuenta con:
+
+- Diseño basado en tarjetas (cards)
+- Formularios estilizados
+- Navegación entre pantallas
+- Animaciones para expanción del contenido
+- Experiencia de usuario optimizada para dispositivos móviles
+
+---
+
+## 🚀 Ejecución del proyecto
+
+1. Instalar dependencias:
+
+`npm install`
+
+2. Iniciar Expo:
+
+`npx expo start`
+
+3. Ejecutar en dispositivo físico o emulador mediante Expo Go
+
+---
+
+## 📦 Generación del APK
+
+El APK fue generado utilizando Expo para su instalación en dispositivos Android.
+
+---
+
+## 📌 Notas adicionales
+
+- La aplicación requiere que el bakend esté en ejecucuón
+- Es necesario configurar correctamente la URL del servidor en el archivo de servicios
+- Se recomienda usar la misma red local para pruebas en dispositivos físicos
+
+---
+
+## 👨‍💻 Autor
+
+Proyecto desarrollado por: **Ángel David García Jiménez**
