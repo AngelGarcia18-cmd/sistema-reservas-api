@@ -1,0 +1,168 @@
+.usuario-container {
+    padding: 30px;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12;
+    border-bottom: 1px solid #334155;
+    text-align: left;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: #ef4444;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+    background-color: #22c55e;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+.btn-eliminar {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    margin-right: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 16px;
+    width: 350px;
+    color: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: fadeInScale 0.3s ease;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.modal-body label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1e293b;
+    color: white;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.btn-cancelar {
+    background: #64748b;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-guardar:hover {
+    transform: scale(1.05);
+}

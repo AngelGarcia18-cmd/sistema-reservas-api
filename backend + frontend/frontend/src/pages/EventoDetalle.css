@@ -1,0 +1,123 @@
+.detalle-wrapper {
+    padding: 40px;
+    background: #f5f7fa;
+    min-height: 100vh;
+}
+
+.detalle-grid {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    height: 90vh;
+    margin: auto;
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+}
+
+.info-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.info-container h1 {
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.datos p {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.estado {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.estado.ACTIVO {
+    background: #d4edda;
+    color: #155724;
+}
+
+.estado.FINALIZADO {
+    background: #f8d7da;
+    color: #155724;
+}
+
+.estado.CANCELADO {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.accion-container {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.ya-inscrito {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.btn-mis-eventos {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-mis-eventos:hover {
+    background: #0056b3;
+}
+
+.nota {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #856404;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffeeba;
+}
+
+.titulo_actividades {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.lista-actividades {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-actividad {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 px 2px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #3498db;
+}

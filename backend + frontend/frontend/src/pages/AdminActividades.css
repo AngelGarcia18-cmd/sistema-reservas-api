@@ -1,0 +1,145 @@
+.admin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    min-height: 100vh;
+    background: #f4f6f8;
+}
+
+.card-admin {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-admin input,
+.form-admin textarea,
+.form-admin select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-admin input:focus,
+.form-admin textarea:focus,
+.form-admin select:focus {
+    border-color: #3498db;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-crear {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #3498db;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-crear:hover {
+    background: #2980b9;
+}
+
+.contenedor-actividades {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 40px;
+}
+
+.titulo-lista {
+    margin-top: 30px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.lista-actividades-admin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card-actividad-admin {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-actividad-admin h3 {
+    margin-bottom: 5px;
+}
+
+.card-actividad-admin p {
+    margin: 5px 0;
+}
+
+.evento {
+    font-weight: bold;
+    color: #3498db;
+}
+
+.acciones {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.btn-eliminar {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background: #e74c3c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background: #c0392b;
+}
+
+.btn-editar {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background: #f39c12;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background: #d68910;
+}

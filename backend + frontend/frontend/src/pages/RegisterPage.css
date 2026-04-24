@@ -1,0 +1,10 @@
+.password-rules p {
+    color: #ef4444;
+    margin: 5px 0;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.password-rules .ok {
+    color: #22c55e;
+}
